@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+* {margin:0px; padding:0px; 
+    box-sizing: border-box;}
+a { color:inherit; text-decoration:none;}  
+img { max-width: 100%;}  /*원본크기이상으로 확대되는것을 방지*/
+.row {max-width: 960px; margin:0 auto;
+      border: 0px solid #f00;}
+
+.cf:after {
+    content:""; display: block;
+    clear: both; }
+
+ul { list-style:none;}
+.blind { width: 1px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 0px;
+    text-indent:-9999px ;
+}
+body { background:url(image/bg.jpg);
+       font-family:'나눔명조';
+}
+#header {
+    background: url(image/header_bg1.gif) no-repeat center;
+    background-size: cover;
+    text-align:center;
+    color: #333;
+}
+#header h1 {padding-top: 70px;}
+#header h1 p {margin: 61px 0px 23px ;
+    font-size: 48px;
+}
+#header p.slogun { font-size: 22.4px;
+    padding-bottom: 150px;
+}
+.article1 ul { padding-top: 150px;}
+.article1 ul li {
+    width: 25%; /*블록요소를 한줄로 정렬하려면 우선 넓이를 설정해야함*/
+    /* display: inline-block; */
+    float: left;
+    text-align: center;
+    padding:0px 30px; }
+/* .article1 ul:after { content:""; display: block;
+        clear: both;}     */
+.article1 h3 { padding:26px 0px 10px;
+              font-size: 26.6px;
+              color:#856656;
+}
+.article1 li p {font-family:'나눔고딕' ;
+                color: #666;
+                line-height: 1.5;
+                padding-bottom: 48px ;
+}
+.article { position:relative }
+.article1 > p { position:absolute;
+    top:-30%; left:20%; 
+    transform:translate(-50%, -50%);
+    transform:scale(0.9);
+}
+.article h2 { font-size:48px ;
+              color:#856656; padding-top:48px ;
+              text-align: center;
+            }
+.article2 { text-align: center; }          
+.article2 p {font-family:'나눔고딕';
+        color:#666;padding: 14px 0 65px; }
+.article2 ul li { 
+    width: 25%;
+    /* display: inline-block; */
+    float:left;
+    margin-bottom: 25px;
+    padding: 0 5px;
+    transition:all 0.5s
+} 
+/* .article2 ul:after { content:""; display: block;
+                    clear: both;}  */
+.article2 ul li:hover {
+    transform:rotateX(2turn) scale(1.5) translate(15%, 15%)
+}                   
+.article3 {text-align: center;}   
+.article3 > p {font-family:'나눔고딕';
+    color:#666; padding: 20px 0 48px;
+ 
+} 
+.article3 .chef p:nth-child(2) { padding: 26px 0 14px;
+font-size: 28.8px; color: #404040;}
+.article3 .chef p:nth-child(3) { font-family:'나눔고딕';   color: #856656; padding-bottom: 112px;}
+
+.article4 table {border-collapse: collapse;
+                width: 100%;
+                font-family: '나눔고딕';
+                color: #404040;
+                margin-top: 57px;
+             }
+caption {display: none}             
+.article4 col:nth-child(1) {width: auto}
+.article4 col:nth-child(2) {width: 10%;}
+.article4 h3 {font-size:25.6px; 
+    color: #85665c;
+    font-weight: normal;
+    padding-bottom: 13px;
+}
+.article4 td { padding:26px 0px}
+.article4 td:nth-child(2) { font-size: 22.4px; text-align: right;}
+.article4 tr {border-bottom:1px solid #404040;}
+.article4 tr:last-child { border-bottom:none }
+.article4 .btn a { width:175px;
+    height:64px; line-height: 64px;
+    background:#85665c;
+    color: #fff;
+    font-family:'나눔고딕';
+    display: block; /*a태그는 인라인성격이므로 높이 넓이값이 안먹힘*/
+    border-radius:50px;
+    text-align: center;
+    line-height: 64px;
+    margin : 43px auto 37px;
+}
+
+.article5 address {
+     font-style:normal;
+     white-space:pre ;
+     font-family:'나눔고딕';
+     color: #666;
+     line-height: 1.5;
+     margin: 101px 0;
+     float: left;
+}
+.article5 > p { float: right; 
+    margin: 101px 0 95px;
+}
+/* .article5:after { content:"";
+    display: block;
+    clear: both;} */
+/* .clear { clear:both } */
+.article5 address span { color: #333;}
+           
+#footer { background-color: #85665c;
+          text-align: center;}
+#footer .reservation { font-size: 32px;
+                      color: #f4ba8e;
+                      padding: 45px 0;
+                    }
+#footer .reservation span { color: #fff; padding: 30px;}   
+#footer .copyright { padding: 61px 0;
+color: #fff;}    
+#footer img { width: 100%;}   

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box } 
+        .boxSizing { 
+            background: pink;
+            width:200px;
+            height:200px;
+            border:10px solid #000;
+            padding: 20px;
+            margin:30px 50px 50px 30px;
+        }   
+        span { border:2px solid #f00;
+            padding: 10px;
+            margin:20px; /*인라인레벨태그(span 등)에서는 margin 상하값과 width, height 적용이 안되므로 display:inline-block으로 문제를 해결함*/
+            display:inline-block;
+            width: 200px; height:200px;
+        }
+        table { border-collapse : collapse;  /*표에 테두리를 적용했을때 인접한 두선을 하나로 합치는 속성*/
+              width:60%; /*table은 블록요소이지만 width:100% 설정해야 부모랑 같은 넓이로 적용됨*/
+              margin: 20px auto 300px;
+              /* border: 3px solid #000; */
+              border-left:none;
+              border-right:none;
+              table-layout: fixed; 
+            }
+
+              td, th { border: 2px solid #ddd;
+                border-left:none;
+                border-right:none; 
+                border-bottom:none;
+                       padding:15px 5px; } /*표의 줄높이는 th와 td에 padding 상하값을 적용해서 맞춤*/
+              td:last-child { text-align: right;}
+              td { white-space: nowrap;
+                   overflow: hidden;
+                   text-overflow: ellipsis; /*table-layout:fixed와 옆에 세가지는 동시에 사용*/
+                 }
+              td:first-child:hover { overflow:visible ;}
+              th { border-bottom: 3px double #ddd;
+                border-top:none; }
+        caption { display:none }    
+        col:nth-child(1) { width:auto; background: lime; }
+        col:nth-child(2) { width:15%; background: pink; }  
+    </style>
+
+</head>
+<body>
+
+    <div class="boxSizing">
+        box-sizing 속성 이해하기
+    </div>
+
+    <span>김정중</span><!--
+ --><span>강정형</span><!--
+ --><span>김채은</span>
+
+ <h2>시험점수</h2>
+<table>
+    <caption>시험점수</caption>
+   <colgroup>
+       <col>
+       <col>
+   </colgroup>
+    <thead>
+        <tr>
+            <th>과목</th>
+            <th>점수</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ipsa facilis iste impedit, minus atque hic quisquam recusandae fuga unde odit non praesentium? Quis voluptate alias dolore veniam autem blanditiis?
+                Quibusdam perspiciatis neque nostrum corrupti vel, veniam rerum cumque, tenetur eveniet aut laudantium, provident nisi dolore quis eaque. Cumque quisquam nostrum est voluptas laborum alias maiores vitae, laboriosam amet similique!
+                Vero veritatis accusantium iusto voluptatum aperiam perferendis molestiae illum? Labore, aut sit? Dolores esse voluptatem corrupti blanditiis saepe, molestias sequi omnis, ratione fugit doloribus placeat velit suscipit deleniti natus praesentium.
+                Porro distinctio sapiente magni laborum consectetur esse sed. Eum eveniet doloremque nemo suscipit consectetur enim nobis reprehenderit animi sapiente hic cum dolorum modi repudiandae atque inventore saepe, voluptate, itaque blanditiis.
+                Qui impedit praesentium est enim consectetur repudiandae incidunt sunt aliquam quam nobis, veniam minus labore saepe iure laborum! Iure unde facere quisquam reprehenderit excepturi asperiores veniam iusto natus repellendus labore?
+            </td>
+            <td>80점</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>90점</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>70점</td>
+        </tr>   
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>점수합계</td>
+            <td>258점</td>
+        </tr>
+    </tfoot>
+</table>
+
+
+</body>
+</html>
